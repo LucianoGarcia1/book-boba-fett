@@ -1,0 +1,468 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: #465845;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  padding: 0px 180px;
+  position: relative;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header #nav {
+  width: 100%;
+}
+
+.header #nav #check {
+  display: none;
+}
+
+.header #nav #menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  list-style: none;
+  gap: 2em;
+}
+
+.header #nav #menu li a {
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 1em;
+  color: #eee;
+  text-decoration: none;
+}
+
+.header #nav #menu li a:hover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  color: #FCAB2B;
+}
+
+.livro {
+  width: 100%;
+  gap: 1em;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.livro .book {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+  width: 50%;
+  text-align: left;
+  padding-left: 180px;
+}
+
+.livro .book fieldset {
+  text-align: center;
+  width: 50%;
+  padding: 3px 0px;
+  border: 10px solid #eee;
+  border-radius: 10px;
+}
+
+.livro .book fieldset legend {
+  color: #eee;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Russo One', sans-serif;
+  letter-spacing: 1px;
+  padding: 0px 10px;
+}
+
+.livro .book fieldset h1 {
+  font-family: 'Russo One', sans-serif;
+  font-size: 4em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 0.8em;
+  color: #FCAB2B;
+}
+
+.livro .book fieldset h1 b {
+  color: #FCAB2B;
+  font-family: 'Russo One', sans-serif;
+  letter-spacing: 3px;
+}
+
+.livro .book p {
+  color: #eee;
+  font-size: 0.9em;
+  width: 80%;
+}
+
+.livro .book #themes {
+  width: 10%;
+  border-radius: 5px;
+  padding: 5px 0;
+  text-align: center;
+  background-color: #FCAB2B;
+  border: none;
+  cursor: pointer;
+}
+
+.livro .book #themes i {
+  font-size: 2.2em;
+  color: #eee;
+}
+
+.livro .temas.active .btns-temas {
+  -webkit-transition: all 0.30s;
+  transition: all 0.30s;
+  visibility: visible;
+  height: 100px;
+}
+
+.livro .temas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5em;
+  width: 100%;
+}
+
+.livro .temas .btns-temas {
+  padding: 10px 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  visibility: hidden;
+}
+
+.livro .temas button {
+  width: 100%;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #eee;
+  cursor: pointer;
+  color: #FCAB2B;
+}
+
+.livro .boba {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  text-align: center;
+}
+
+.livro .boba img {
+  height: 655px;
+}
+
+.livro .boba .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1em;
+}
+
+.livro .boba .social i {
+  font-size: 1.6em;
+  color: #FCAB2B;
+}
+
+.livro .boba .social i:hover {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  color: #eee;
+}
+
+.assinatura {
+  background-color: #FCAB2B;
+  border: none;
+  min-width: 34%;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: #eee;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.assinatura:hover {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  background-color: #eee;
+  color: #FCAB2B;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 80px;
+  background-color: #465845;
+  text-align: center;
+}
+
+footer h3 {
+  color: #FCAB2B;
+  font-size: 1em;
+}
+
+footer h3 a {
+  color: #eee;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 930px) {
+  .header {
+    width: 100%;
+    padding: 0;
+    height: 60px;
+  }
+  .header #nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header #nav .checkbtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    cursor: pointer;
+  }
+  .header #nav .checkbtn #hamburguer {
+    width: 30px;
+    border-top: 2px solid #eee;
+    display: block;
+  }
+  .header #nav .checkbtn #hamburguer::before {
+    content: '';
+    width: 20px;
+    border-top: 2px solid #eee;
+    display: block;
+    margin-top: 5px;
+  }
+  .header #nav .checkbtn #hamburguer::after {
+    content: '';
+    width: 10px;
+    border-top: 2px solid #eee;
+    display: block;
+    margin-top: 5px;
+  }
+  .header #nav #check:checked ~ #menu {
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 50px 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 60px;
+    background-color: #FCAB2B;
+  }
+  .header #nav #check:checked ~ #menu a {
+    display: block;
+    line-height: 3em;
+  }
+  .header #nav #check:checked ~ #menu a:hover {
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    background-color: #eee;
+  }
+  .header #nav #check:checked ~ .checkbtn {
+    text-align: center;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  .header #nav #menu {
+    display: none;
+  }
+  .header #nav #menu .assinatura {
+    display: none;
+  }
+  .livro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    min-height: 1200px;
+    gap: 0;
+  }
+  .livro .book {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    min-height: 500px;
+  }
+  .livro .book button {
+    width: 90%;
+  }
+  .livro .book .temas {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .livro .boba {
+    min-width: 100%;
+    min-height: 750px;
+  }
+  .livro .boba img {
+    height: 660px;
+  }
+  footer {
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .livro {
+    min-height: 1400px;
+  }
+  .livro .book #themes {
+    width: 30%;
+    border-radius: 5px;
+    padding: 5px 20px;
+  }
+  .livro .boba {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 3em;
+  }
+  .livro .boba img {
+    height: 600px;
+  }
+  .livro .boba .social {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Boba fett, The Book Of Boba Fett, O Livro de Boba Fett, Star Wars, Mandaloriano, Baby Yoda">
+    <meta name="description" content="O Livro de Boba Fett, assista agora online">
+    <meta name="robots" content="index,nofollow">
+
+    <!--FONT AWESOME-->
+    <script src="https://kit.fontawesome.com/7a98acb87b.js" crossorigin="anonymous"></script>
+
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bungee&family=Russo+One&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="../assets/img/bobafett.png" type="image/x-icon">
+    <title>O Livro de Boba Fett</title>
+    <link rel="stylesheet" href="../src/scss/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav id="nav">
+
+            <input type="checkbox" id="check">
+		    <label for="check" class="checkbtn">
+		    	<span id="hamburguer"></span>
+		    </label>
+
+            <ul id="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Faq</a></li>
+                <li><a href="#">Saiba mais</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><button class="assinatura" onclick="assista()">Assista agora</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="livro">
+        <div class="book">
+            <fieldset>
+                <legend>The Book of</legend>
+                <h1>Boba <br>
+                 <b>Fett</b>
+                </h1>
+            </fieldset>
+
+            <p>
+                Boba Fett foi um clone inalterado de Jango Fett, um homem caçador de recompensas Mandaloriano que criou Boba como seu filho durante a Era da República. Treinado em combate e habilidades marciais desde jovem, Fett foi um dos caçadores de recompensas mais temidos da galáxia durante a Era do Império.
+            </p>
+
+            <button class="assinatura" onclick="assista()">
+                Assista Agora
+            </button>
+            
+
+            <div class="temas" id="temas">
+                <button id="themes" onclick="vilwT()">
+                    <i class="fas fa-cog"></i>
+                </button>
+                
+                <div class="btns-temas" id="btnThemes">
+                    <button id="tems1" onclick="themeG()">
+                        Theme Orange
+                    </button>
+            
+                    <button id="tems2" onclick="themeGreen()" onkeydown="">
+                        Theme Green
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="boba">
+            <img src="../assets/img/Boba-Fett-PNG-Background-Image.png" alt="boba fett">
+
+            <div class="social">
+                <a href=""><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <h3>
+            Desenvolvido By: <a href="https://luciano-garcia.vercel.app/">Luciano Garcia</a>
+        </h3>
+
+        <audio autoplay loop>
+            <source src="../assets/sounds/X2Download.com - Boba Fett Theme _ EPIC VERSION (The Book of Boba Fett End Credits Soundtrack) (128 kbps).mp3" type="audio/ogg">
+            <source src="../assets/sounds/X2Download.com - Boba Fett Theme _ EPIC VERSION (The Book of Boba Fett End Credits Soundtrack) (128 kbps).mp3" type="audio/mpeg">
+        </audio>
+    </footer>
+
+    <script src="../src/js/script.js"></script>
+    <script src="../src/js/settings.js"></script>
+    <script src="../src/js/direction.js"></script>
+</body>
+</html>

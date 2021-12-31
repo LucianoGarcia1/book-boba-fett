@@ -1,0 +1,368 @@
+@import 'variables';
+@import 'reset';
+@import 'mixins';
+
+.header{
+    width: 100%;
+    height: 100px;
+    padding: 0px 180px;
+    position: relative;
+    z-index: 100;
+
+    @include flex-header;
+    
+    #nav{
+        width: 100%;
+
+        #check{
+            display: none;
+        }
+
+        #menu{
+            @include flex-menu;
+
+            li a{
+                letter-spacing: 1px;
+                font-weight: 600;
+                font-size: 1em;
+                color: $color-white;
+                text-decoration: none;
+
+                &:hover{
+                    transition: all 0.5s;
+                    color: $color-fett;
+                }
+            }
+        }
+    }
+}
+
+.livro{
+    width: 100%;
+    gap: 1em;
+    height: 500px;
+    @include flex-header;
+
+    .book{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        width: 50%;
+        text-align: left;
+        padding-left: 180px;
+
+        fieldset{
+            text-align: center;
+            width: 50%;
+            padding: 3px 0px;
+            border: 10px solid $color-white;
+            border-radius: 10px;
+
+            legend{
+                color: $color-white;
+                font-size: 1.2em;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-family: 'Russo One', sans-serif;
+                letter-spacing: 1px;
+                padding: 0px 10px;
+            }
+
+            h1{
+                font-family: 'Russo One', sans-serif;
+                font-size: 4em;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-align: center;
+                line-height: 0.8em;
+                color: $color-fett;
+
+                b{
+                    color: $color-fett;
+                    font-family: 'Russo One', sans-serif;
+                    letter-spacing: 3px;
+                }
+            }
+        }
+
+        p{
+            color: $color-white;
+            font-size: 0.9em;
+            width: 80%;
+        }
+
+        #themes{
+            width: 10%;
+            border-radius: 5px;
+            padding: 5px 0;
+            text-align: center;
+            background-color: $color-fett;
+            border: none;
+            cursor: pointer;
+
+            i{
+                font-size: 2.2em;
+                color: $color-white;
+            }
+        }
+    }
+
+
+    .temas.active .btns-temas{
+        transition:all 0.30s;
+        visibility: visible;
+        height: 100px;
+    }
+
+    .temas{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        width: 100%;
+
+        .btns-temas{
+            padding: 10px 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+        }
+
+        button{
+            width: 100%;
+            font-size: 1em;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: $color-white;
+            cursor: pointer;
+            color: $color-fett;
+        }
+    }
+
+    .boba{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 50%;
+        text-align: center;
+
+        img{
+            height: 655px;
+        }
+
+        .social{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+            
+            i{
+                font-size: 1.6em;
+                color: $color-fett;
+
+                &:hover{
+                    transition: all .5s;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}
+
+.assinatura{
+    background-color: $color-fett;
+    border: none;
+    min-width: 34%;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: $color-white;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+
+    &:hover{
+        transition: all .5s;
+        background-color: $color-white;
+        color: $color-fett;
+    }
+}
+
+footer{
+    @include flex-header;
+    position: relative;
+    width: 100%;
+    height: 80px;
+    background-color: $color-boba;
+    text-align: center;
+
+    h3{
+        color: $color-fett;
+        font-size: 1em;
+
+        a{
+            color: $color-white;
+            text-decoration: none;
+        }
+    }
+}
+
+@media screen and (max-width: 930px){
+
+    .header{
+        width: 100%;
+        padding: 0;
+        height: 60px;
+
+        #nav{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .checkbtn{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all .5s;
+                cursor: pointer;
+        
+                & #hamburguer{
+                    width: 30px;
+                    border-top: 2px solid $color-white;
+                    display: block;
+                }
+
+                & #hamburguer::before{
+                    content: '';
+                    width: 20px;
+                    border-top: 2px solid $color-white;
+                    display: block;
+                    margin-top: 5px;
+                }
+                
+                & #hamburguer::after{
+                    content: '';
+                    width: 10px;
+                    border-top: 2px solid $color-white;
+                    display: block;
+                    margin-top: 5px;
+                }
+                
+            }
+
+            #check:checked ~ #menu{
+                transition: all .5s;
+                width: 100%;
+                display: block;
+                text-align: center;
+                padding: 50px 0;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 60px;
+                background-color: $color-fett;
+
+                 a{
+                    display: block;
+                    line-height: 3em;
+                }
+
+                a:hover{
+                    transition: all .5s;
+                    background-color: $color-white;
+                }
+            }
+
+            #check:checked ~ .checkbtn{
+                text-align: center;
+                transition: all .5s;
+                transform: rotate(360deg);
+            }
+
+            
+
+            #menu{
+                display: none;
+
+                .assinatura{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .livro{
+        @include flex-header;
+        flex-direction: column;
+        width: 100%;
+        min-height: 1200px;
+        gap: 0;
+        
+        .book{
+            align-items: center;
+            justify-content: center;
+            padding-left: 0;
+            flex-direction: column;
+            width: 100%;
+            min-height: 500px;
+
+            button{
+                width: 90%;
+            }
+
+            .temas{
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .boba{
+            min-width: 100%;
+            min-height: 750px;
+
+            img{
+                height: 660px;
+            }
+        }
+    }
+
+    footer{
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 400px){
+
+    .livro{
+        min-height: 1400px;
+
+        .book{
+            #themes{
+                width: 30%;
+                border-radius: 5px;
+                padding: 5px 20px;
+            }
+        }
+
+        .boba{
+            align-items: center;
+            justify-content: center;
+            flex-direction: column-reverse;
+            gap: 3em;
+
+            img{
+                height: 600px;
+            }
+
+            .social{
+                flex-direction: row;
+                width: 100%;
+            }
+        }
+    }
+}

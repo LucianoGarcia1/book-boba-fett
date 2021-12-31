@@ -1,0 +1,13 @@
+@mixin flex-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+    gap: 2em;
+}
